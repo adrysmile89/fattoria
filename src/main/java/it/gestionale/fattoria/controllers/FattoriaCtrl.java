@@ -25,10 +25,10 @@ public class FattoriaCtrl {
 		return ResponseEntity.ok("Fattoria è funzionante.");
 	}
 	
-	List<CalendarioDto> outList=Arrays.asList(new CalendarioDto(0,LocalDate.now(),2),new CalendarioDto(0,LocalDate.of(2024, 3, 3),7));
 	
 	@GetMapping(value="all", produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<CalendarioDto>> getCalendario(){
+		List<CalendarioDto> outList=Arrays.asList(new CalendarioDto(0,LocalDate.now(),2),new CalendarioDto(0,LocalDate.of(2024, 3, 3),7));
 		
 		return ResponseEntity.ok(outList);
 	}
