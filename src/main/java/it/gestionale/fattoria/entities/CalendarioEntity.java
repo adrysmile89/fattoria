@@ -17,9 +17,10 @@ public class CalendarioEntity {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	@Column(name="data" , nullable=false, unique=true)
-	private LocalDate data =LocalDate.now();
+	private LocalDate data;
 	@Column(name="uova" , nullable=false, unique=false)
 	private int uova =0;
+
 	public CalendarioEntity() {
 	}
 	public CalendarioEntity(Long id, LocalDate data, int uova) {
@@ -27,6 +28,7 @@ public class CalendarioEntity {
 		this.data = data;
 		this.uova = uova;
 	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -45,6 +47,7 @@ public class CalendarioEntity {
 	public void setUova(int uova) {
 		this.uova = uova;
 	}
+	
 	@Override
 	public String toString() {
 		return "CalendarioEntity [id=" + id + ", data=" + data + ", uova=" + uova + "]";

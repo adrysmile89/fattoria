@@ -7,6 +7,7 @@ public class CalendarioDto {
 	private long id;
 	private LocalDate data;
 	private int uova;
+		
 	public CalendarioDto() {
 	}
 	public CalendarioDto(LocalDate data, int uova) {
@@ -18,6 +19,7 @@ public class CalendarioDto {
 		this.data = data;
 		this.uova = uova;
 	}
+	
 	public long getId() {
 		return id;
 	}
@@ -36,6 +38,7 @@ public class CalendarioDto {
 	public void setUova(int uova) {
 		this.uova = uova;
 	}
+	
 	@Override
 	public String toString() {
 		return "CalendarioDto [id=" + id + ", data=" + data + ", uova=" + uova + "]";
